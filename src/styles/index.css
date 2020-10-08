@@ -1,0 +1,153 @@
+.description {
+  margin-top: 10px;
+  background-color: rgb(134, 54, 41);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  padding: 4% 10% 4% 10%;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+}
+
+.hours-header {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.hours {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+
+.contact {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+.contact a {
+  text-decoration: none;
+}
+.contact a:visited {
+  color: black;
+}
+.contact a:hover {
+  color: blue;
+}
+
+.menu {
+  font-family: "Holtwood One SC";
+  font-size: 32px;
+  color: rgb(134, 54, 41);
+  text-decoration: none;
+}
+
+hr {
+  border-top: 1px solid rgb(134, 54, 41);
+}
+
+.navbar {
+  background-color: rgb(134, 54, 41);
+  background-image: url("../images/navbar.png");
+  background-repeat: repeat-x;
+  -webkit-background-size: auto 200px;
+  -moz-background-size: auto 200px;
+  -o-background-size: auto 200px;
+  background-size: auto 200px;
+  min-height: 85px;
+  align-items: center;
+  padding-top: 33px;
+  width: 100%;
+}
+
+.logo-div {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.logo {
+  width: 300px;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 30vw;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: auto;
+  align-self: flex-start;
+}
+
+.color-box {
+  background-color: rgb(134, 54, 41);
+  width: 100%;
+}
+
+.combo img {
+    max-width: 100%;
+    height: auto;
+    align-self: flex-start;
+}
+@media (max-width: 1200px) {
+  .logo {
+    width: 260px;
+    overflow: hidden;
+  }
+  .logo-div {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -130px;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo {
+    width: 250px;
+    overflow: hidden;
+  }
+  .logo-div {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -125px;
+  }
+  .header-image {
+    width: 40vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: auto;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 174px;
+    overflow: hidden;
+  }
+  .logo-div {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -87px;
+  }
+  .header-image {
+    width: 44vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: auto;
+
+  }
+}
