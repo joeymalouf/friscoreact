@@ -1,3 +1,18 @@
+.indexFrame {
+  margin-bottom: -50px;
+  min-height: 100%;
+}
+.push {
+  height: 50px;
+}
+.body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
 .description {
   margin-top: 10px;
   background-color: rgb(134, 54, 41);
@@ -27,23 +42,29 @@
   padding-bottom: 5px;
 }
 
-.contact {
+.location {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  color: blue;
+}
+
+.location:visited {
+  color: blue;
+}
+.location:hover {
+  color: blue;
+}
+.telephone {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   font-weight: bolder;
   text-align: center;
 }
-.contact a {
-  text-decoration: none;
-}
-.contact a:visited {
-  color: black;
-}
-.contact a:hover {
-  color: blue;
-}
-
 .menu {
   font-family: "Holtwood One SC";
   font-size: 32px;
@@ -95,10 +116,18 @@ hr {
 }
 
 .combo img {
-    max-width: 100%;
-    height: auto;
-    align-self: flex-start;
+  max-width: 100%;
+  height: auto;
+  align-self: flex-start;
 }
+
+.footerLink {
+  font-family: "Trebuchet MS";
+  font-size: 20px;
+  color: #fafafa;
+  text-decoration: none;
+}
+
 @media (max-width: 1200px) {
   .logo {
     width: 260px;
@@ -128,7 +157,6 @@ hr {
     margin-left: 5px;
     margin-right: 5px;
     height: auto;
-
   }
 }
 
@@ -148,6 +176,5 @@ hr {
     margin-left: 5px;
     margin-right: 5px;
     height: auto;
-
   }
 }
