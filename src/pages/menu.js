@@ -2,11 +2,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { get } from "lodash" // Optional
-import { Flex, Box } from "@chakra-ui/core"
+import { Flex, Box, Icon } from "@chakra-ui/core"
 import "../styles/index.css"
 import Category from "../components/category"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import favicon from "../images/FriscoIconLetter.png"
+import { Helmet } from "react-helmet"
 
 // Index Page Component
 const MenuPage = ({ data }) => {
@@ -15,18 +17,25 @@ const MenuPage = ({ data }) => {
   categoryNames.forEach(category => {
     category.foods = []
     foods.forEach(food => {
-      if (food.foodcategory == category.categoryname) {
+      if (food.foodcategory === category.categoryname) {
         category.foods.push(food)
       }
     })
   })
   console.log(categoryNames)
-  // var johns = group.map(group, function(o) {
-  //   if (o.foodcategory == "Plates") return o;
-  // });
-  // console.log(johns)
+
   return (
     <Box className="body" bg="darkShade">
+      <Helmet>
+        <html lang="en" />
+        <title>Frisco Deli</title>
+        <meta
+          name="description"
+          content="Frisco Deli is a deli and fried food restaurant in Pearl, Mississippi"
+        ></meta>
+
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Box className="indexFrame" bg="darkShade">
         <Header></Header>
         <hr></hr>
@@ -58,6 +67,7 @@ export const categories = graphql`
         foodname
         fooddescription
         foodcategory
+        foodimage
       }
     }
     query2: allGoogleSheetSheetRow(

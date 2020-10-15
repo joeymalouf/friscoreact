@@ -1,7 +1,6 @@
 // index.js
 import React from "react"
-import { get } from "lodash" // Optional
-import { Flex, Box, Image } from "@chakra-ui/core"
+import { Flex, Box, Image, Heading } from "@chakra-ui/core"
 import "../styles/index.css"
 import { Link } from "gatsby"
 import ham from "../images/smokedham1.jpg"
@@ -12,16 +11,22 @@ import muffaletta from "../images/muff.jpg"
 import turkey from "../images/smoked turkey1.jpg"
 import Footer from "../components/footer"
 import navbar from "../images/navbar.png"
+import favicon from "../images/FriscoIconLetter.png"
+import { Helmet } from "react-helmet"
 
 // Index Page Component
-const IndexPage = ({ data }) => {
-  const nodes = get(data, "allGoogleSheetSheetRow.nodes", [])
+const IndexPage = () => {
   return (
     <Box height="100%">
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-      ></meta>
+      <Helmet>
+        <html lang="en" />
+        <title>Frisco Deli</title>
+        <meta
+          name="description"
+          content="Frisco Deli is a deli and fried food restaurant in Pearl, Mississippi"
+        ></meta>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Box marginBottom="-50px" minHeight="100%">
         <Flex
           backgroundColor="rgb(134, 54, 41)"
@@ -55,12 +60,7 @@ const IndexPage = ({ data }) => {
             marginRight="2.5px"
             marginLeft="5px"
           >
-            <Image
-              alignSelf="flex-start"
-              height="auto"
-              w="100%"
-              src={roast}
-            />
+            <Image alignSelf="flex-start" height="auto" w="100%" src={roast} />
           </Flex>
           <Flex
             width={["44%", "40%", "40%", "30%"]}
@@ -97,12 +97,29 @@ const IndexPage = ({ data }) => {
         <hr></hr>
         <Flex justifyContent="center" alignItems="center">
           <Link className="menu" to="/menu">
-            MENU
+            <Heading
+              as="h1"
+              fontFamily="Holtwood One SC"
+              margin="0px"
+              fontSize="32px"
+              fontWeight="500"
+            >
+              MENU
+            </Heading>
           </Link>
         </Flex>
         <hr></hr>
         <Flex flexDir="column" justifyContent="center" alignItems="center">
-          <Flex className="hours-header">Hours</Flex>
+          <Flex paddingBottom="10px">
+            <Heading
+              fontFamily="Trebuchet MS"
+              fontSize="28px"
+              fontWeight="bolder"
+              margin="0px"
+            >
+              Hours
+            </Heading>
+          </Flex>
           <Flex flexDir="column" justifyContent="center" alignItems="flex-end">
             <Flex className="hours">Mon-Thu: 10:30am - 8:00pm</Flex>
             <Flex className="hours">Friday: 10:30am - 8:30pm</Flex>
@@ -113,14 +130,14 @@ const IndexPage = ({ data }) => {
           className="description"
           fontSize={["20px", "24px", "24px", "24px"]}
         >
-          We are a small, family owned restaurant that started out in malls in
-          1984 and moved to Pearl in 1993. Many refer to us as a 'mom and pop
-          store' while others refer to us as 'that secret hole in the wall.' We
-          have something for everyone, from giant sandwiches to our award
-          winning rib plates. Our catfish is seasoned with our own original
-          recipe, and our chicken tenders go great with our secret honey mustard
-          recipe made with local honey. We're a family-friendly restaurant at an
-          affordable price, and we hope to see you soon!
+          Frisco Deli is a small, family owned restaurant that started out in
+          malls in 1984 and moved to Pearl in 1993. Many refer to us as a 'mom
+          and pop store' while others refer to us as 'that secret hole in the
+          wall.' We have something for everyone, from giant sandwiches to our
+          award winning rib plates. Our catfish is seasoned with our own
+          original recipe, and our chicken tenders go great with our secret
+          honey mustard recipe made with local honey. We're a family-friendly
+          restaurant at an affordable price, and we hope to see you soon!
         </Flex>
         <hr></hr>
         <Flex

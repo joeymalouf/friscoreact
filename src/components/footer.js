@@ -32,8 +32,6 @@ const Footer = () => {
           </Link>
         </Flex>
       </Flex>
-
-      <h3></h3>
     </Flex>
   )
 }
